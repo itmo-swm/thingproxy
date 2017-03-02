@@ -82,9 +82,9 @@ function processRequest(req, res) {
         }
 
         // Naughty, naughty— deny requests to blacklisted hosts
-        if (config.blacklist_hostname_regex.test(remoteURL.hostname)) {
-            return writeResponse(res, 400, "naughty, naughty...");
-        }
+//        if (config.blacklist_hostname_regex.test(remoteURL.hostname)) {
+//            return writeResponse(res, 400, "naughty, naughty...");
+//        }
 
         // We only support http and https
         if (remoteURL.protocol != "http:" && remoteURL.protocol !== "https:") {
